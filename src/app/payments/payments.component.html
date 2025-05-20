@@ -1,0 +1,13 @@
+<form (ngSubmit)="submitPayment()">
+  <mat-form-field>
+    <input matInput placeholder="Recipient UPI ID" [(ngModel)]="upi" name="upi">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="number" placeholder="Amount" [(ngModel)]="amount" name="amount">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Note" [(ngModel)]="note" name="note"></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="accent">Send Money</button>
+  <div *ngIf="message" style="color: green;">{{ message }}</div>
+</form>
